@@ -1,0 +1,20 @@
+service: github-webhook-listener
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  environment:
+    GITHUB_WEBHOOK_SECRET: __YOUR_WEBHOOK_SECRET__
+    GITHUB_TOKEN: __YOUR_ACCESS_TOKEN__
+    GITHUB_USERNAME: __YOUR_GH_USERNAME__
+    GITHUB_PASSWORD: __YOUR_GH_PASSWORD__
+    GITHUB_EMAIL: __YOUR_GH_EMAIL__
+
+functions:
+  githubWebhookListener:
+    handler: handler.githubWebhookListener
+    events:
+      - http:
+          path: webhook
+          method: post
+          cors: true

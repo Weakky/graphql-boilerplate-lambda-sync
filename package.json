@@ -1,0 +1,21 @@
+{
+  "name": "aws-github-webhook-listener",
+  "version": "1.0.0",
+  "description": "Extend your github repositories with this github webhook listener",
+  "main": "handler.js",
+  "scripts": {
+    "deploy": "serverless deploy",
+    "logs": "serverless logs -f githubWebhookListener -t"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "lambda-git": "^0.1.2",
+    "lodash.flatmap": "^4.5.0",
+    "octonode": "^0.9.2",
+    "promise.map": "0.0.2",
+    "rsyncwrapper": "^2.0.1",
+    "simple-git": "^1.92.0"
+  },
+  "author": "David Wells",
+  "license": "MIT"
+}
