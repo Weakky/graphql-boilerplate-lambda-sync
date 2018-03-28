@@ -26,7 +26,6 @@ function signRequestBody(key, body) {
 }
 
 module.exports.githubWebhookListener = (event, context, callback) => {
-  var errMsg; // eslint-disable-line
   const token = process.env.GITHUB_WEBHOOK_SECRET;
   const headers = event.headers;
   const sig = headers['X-Hub-Signature'];
